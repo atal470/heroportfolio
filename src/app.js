@@ -4,6 +4,7 @@ const app=express();
 const User=require("./models/usermessage");
 require("./db/conn");
 const hbs=require("hbs");
+const port = process.env.PORT || 8000;
 
 
 //static files
@@ -35,10 +36,8 @@ app.post("/contact",async(req,res)=>{
 })
 
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 3000;
-}
+
+
 
 app.listen(port,()=>{
     console.log(`servers is running at ${port}`)
