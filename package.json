@@ -4,14 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/app.js -e js,hbs"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "engines": {
-    "node": "14.17.0"
-  },
+  
   "dependencies": {
     "bootstrap": "^5.0.1",
     "express": "^4.17.1",
