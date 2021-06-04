@@ -5,7 +5,7 @@ const User=require("./models/usermessage");
 require("./db/conn");
 const hbs=require("hbs");
 
-const port=3000;
+
 //static files
 app.use('/css',express.static(path.join(__dirname,"../node_modules/bootstrap/dist/css")))
 app.use('/js',express.static(path.join(__dirname,"../node_modules/bootstrap/dist/js")))
@@ -33,6 +33,13 @@ app.post("/contact",async(req,res)=>{
         res.status(500).send(error)
     }
 })
+
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
 app.listen(port,()=>{
     console.log(`servers is running at ${port}`)
 })
